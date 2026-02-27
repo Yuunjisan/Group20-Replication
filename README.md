@@ -23,14 +23,7 @@ You need these installed on your machine before starting:
 
 ## Setup (step by step)
 
-### 1. Clone and enter the project
-
-```bash
-git clone <repo-url>
-cd SSE-26
-```
-
-### 2. Create a Python virtual environment
+### 1. Create a Python virtual environment
 
 ```bash
 python3 -m venv venv
@@ -38,7 +31,7 @@ source venv/bin/activate      # macOS / Linux
 # venv\Scripts\activate       # Windows (PowerShell)
 ```
 
-### 3. Install Python dependencies
+### 2. Install Python dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -46,7 +39,7 @@ pip install -r requirements.txt
 
 This installs: `selenium`, `webdriver-manager`, `psutil`, `pandas`, `matplotlib`, `seaborn`, `numpy`, `python-dotenv`.
 
-### 4. Build EnergiBridge (energy measurement tool)
+### 3. Build EnergiBridge (energy measurement tool)
 
 [EnergiBridge](https://github.com/tdurieux/EnergiBridge) is a cross-platform tool that measures **real system power** (Watts) during experiments.
 
@@ -69,7 +62,7 @@ EnergiBridge/target/release/energibridge --summary -m 2 sleep 2
 # Should print: "Energy consumption in joules: XX.XX for 2.XX sec of execution."
 ```
 
-### 5. Create meeting links
+### 4. Create meeting links
 
 **Create your meetings:**
 - **Google Meet:** Go to [meet.google.com](https://meet.google.com), click "New meeting" → "Start an instant meeting". Copy the URL (looks like `https://meet.google.com/abc-defg-hij`).
@@ -77,7 +70,9 @@ EnergiBridge/target/release/energibridge --summary -m 2 sleep 2
 
 ## Running Experiments
 
-### For setting up the environment for adding bot participants
+### For setting up the environment for adding bot participants. 
+
+> This script is for windows users, please adapt it to have command instead of ctrl if you use a mac.
 ```bash
 cd src 
 
@@ -87,7 +82,11 @@ python set_up_participant_bots.py --platform teams --url "PASTE_YOUR_TEAMS_LINK_
 ### Full experiment (30 runs per platform)
 ```
 ### For running the experiments for each platform
->Copy your Meet and Teams link to the respective fields.
+> This script is for mac users, please adapt it to have ctrl instead of command if you use windows.
+>Copy your Meet and Teams link to the respective fields. Configure Teams and Meet so that all participants have permission to join and access everything they need.
+
+> The results will be saved to the /data folder, you can see it from there.
+
 ```bash
 cd src
 
@@ -99,6 +98,7 @@ python run_experiment.py \
   --visible
 ```
 ### For the test statistics
+
 ```bash
 cd data
 # for outlier detection

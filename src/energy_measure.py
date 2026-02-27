@@ -1,13 +1,3 @@
-"""
-Energy Measurement Wrapper — measures energy consumption while bots are in a video call.
-
-Uses EnergiBridge (https://github.com/tdurieux/EnergiBridge) for accurate, hardware-level
-energy measurement via SYSTEM_POWER readings. EnergiBridge supports macOS (Intel + Apple
-Silicon), Linux (RAPL), and Windows.
-
-Fallback: psutil-based CPU power estimation if EnergiBridge binary is not found.
-"""
-
 import argparse
 import csv
 import os
