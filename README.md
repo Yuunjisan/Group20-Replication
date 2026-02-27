@@ -126,5 +126,4 @@ SSE-26/
 │   ├── energy_measure.py     # Energy measurement wrapper (EnergiBridge)
 │   ├── run_experiment.py     # Runs full experiment  statistics from data
 ├── data/                     # Raw experiment results (CSV per run)
-└── figures/                  # Generated charts (PNG)
 ```
