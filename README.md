@@ -125,7 +125,7 @@ SSE-26/
 │   ├── bot_manager.py        # Selenium bots that join Meet/Teams calls
 │   ├── energy_measure.py     # Energy measurement wrapper (EnergiBridge)
 │   ├── run_experiment.py     # Runs full experiment  statistics from data
-├── data/                     # Processed results and code that anaylzes the data
+│    ├── data/                # Processed results and code that anaylzes the data
 ├── experiment_results/       # Raw experiment results (CSV per run)
 ```
 > The experiment_results directory comprises of the raw results of the experiments that we conducted.
