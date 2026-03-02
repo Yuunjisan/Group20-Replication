@@ -127,3 +127,4 @@ SSE-26/
 │   ├── run_experiment.py     # Runs full experiment  statistics from data
 ├── data/                     # Raw experiment results (CSV per run)
 ```
+> The experiment_results directory comprises of the raw results of the experiments that we conducted.
